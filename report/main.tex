@@ -1,0 +1,437 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[spanish,mexico]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx,wrapfig}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage[colorlinks=true,urlcolor=red,citecolor=red,linkcolor=blue,linktocpage,pdfpagelabels,bookmarksnumbered,bookmarksopen]{hyperref}
+\usepackage{fontawesome}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\pagestyle{fancy}
+\rfoot{Abril, 2025}
+\cfoot{\thepage}
+\lhead{Gestión-hídrica-subcuenca-RH12Ec}
+\lfoot{}
+\rhead{}
+\renewcommand{\footrulewidth}{\headrulewidth}
+\setlength{\headheight}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0cm}
+%\renewcommand{\baselinestretch}{2}
+\usepackage{setspace}
+
+
+
+
+%---------------------------------
+
+\begin{document}
+
+
+\thispagestyle{empty}
+\titlepage{
+
+
+\begin{center}
+
+\Huge{
+\textbf{Análisis Hidrológico y Priorización de Gestión Hídrica – Subcuenca RH12Ec}
+}
+    
+\end{center}
+
+\vspace{6cm}
+
+\begin{flushright}
+
+\Huge{Por\\
+
+Eli Kenneth Aguilar-Anzures}
+    
+\end{flushright}
+
+\vfill
+
+\Huge{Abril, 2025}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\section{Resumen}
+
+En esta prueba técnica se llevó a cabo un análisis del comportamiento hídrico, así como del contexto ambiental y social, en un área de 50 km$^2$ ubicada en la subcuenca RH12Ec, en Jalisco. Se realizaron estudios cartográficos que incluyeron factores como la topografía, la edafología, el uso de suelo y la red de drenaje, lo que permitió identificar siete zonas potenciales para intervenciones de gestión hídrica con capacidad para retener escurrimientos. Además, se analizó la precipitación, el escurrimiento y la infiltración históricos, identificando patrones significativos y elaborando pronósticos para mejorar la gestión del recurso hídrico en la región.
+
+\section{Área de estudio}
+
+La región de interés abarca un cuadrante de 50 km$^2$, ubicado al noreste de la subcuenca hidrográfica RH12Ec, en la porción centro-norte del estado de Jalisco. El área de estudio (AE) se localiza dentro de la zona UTM 13N, entre las coordenadas 662,625.57 m E y 669,695.57 m E (ver figura \ref{fig:loc}).
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figs/mapa localización.png}
+    \caption{Mapa de localización del cuadrante utilizado para el análisis.}
+    \label{fig:loc}
+\end{figure}
+
+El AE comprende porciones de los municipios de San Cristóbal de la Barranca (al norte), Zapopan (al sur) e Ixtlahuacán del Río (al sureste). En su interior se identifican 14 localidades, de las cuales únicamente 8 cuentan con población registrada. La localidad más habitada es Huaxtla, situada en la porción sudoriental del área, con un total de 97 habitantes \cite{6}.\\
+
+La zona de estudio presenta un clima cálido subhúmedo \cite{1,2}, y se ve influenciada por la presencia del río Santiago, el cual fluye en dirección SE-NW, al este del área. Este río se origina en el lago de Chapala, ubicado a unos 75 km al sur, y constituye la principal fuente de agua superficial de la región seleccionada.\\
+
+Actualmente, la región enfrenta serios problemas de sobreexplotación hídrica. El acuífero correspondiente al AE está catalogado como sin disponibilidad y sobreexplotado \cite{1}. Por este motivo, resulta indispensable implementar estrategias de gestión del agua, como la construcción de obras de retención de escurrimientos, que favorezcan la recarga del acuífero y contribuyan al manejo sostenible del recurso hídrico.
+
+\section{Clasificación de uso del suelo y análisis satelital}
+
+La clasificación supervisada del uso de suelo en el AE indica que predomina la vegetación natural de densidad moderada, que ocupa el 63\% del área (ver tabla \ref{tab:t1}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figs/uso suelo.png}
+    \caption{Mapa que muestra la clasificación de uso del suelo en el AE a partir del análisis de una imagen del satélite Landsat 7 con la herramienta dzetsaka \cite{7}.}
+    \label{fig:uso}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|c|c}
+\hline
+Categoría & Superficie (ha) & Porcentaje  \\ \hline
+Vegetación densa & 324.27 & 7\% \\
+Vegetación moderada & 3134.7 & 63\% \\
+Área urbana y suelo expuesto\cite{4} & 1192.05 & 24\% \\
+Agricultura & 263.52 & 5\% \\
+Cuerpos de agua & 34.56 & 1\% \\ \hline
+    \end{tabular}
+    \caption{Clasificación de uso de suelo en el AE.}
+    \label{tab:t1}
+\end{table}
+
+
+
+\section{Análisis para la identificación de zonas con potencial para retención de escurrimientos}
+
+Se identificaron siete zonas prioritarias a partir del análisis de elevación, pendiente, edafología, red de drenaje y uso de suelo (ver figura \ref{fig:zon}), siguiendo los siguientes criterios: 
+
+\begin{enumerate}
+    \item \textbf{Topografía:} Se analizaron los datos de elevación y pendiente para diferenciar zonas de recarga y áreas donde el agua escurre rápidamente sin infiltrarse (ver figuras \ref{anx:a} y \ref{anx:b}).
+    \item \textbf{Edafología:} Se priorizaron suelos permeables (textura arenosa y franco-arenosa) que favorecen la infiltración (ver figura \ref{anx:c}).
+    \item \textbf{Uso de suelo y vegetación:} Se consideraron áreas con cobertura vegetal moderada o densa para mejorar la retención hídrica y evitar erosión, así como zonas agrícolas y urbanas donde las intervenciones pueden ser también de prevención de riesgos (ver figura \ref{fig:uso}).
+    \item \textbf{Red de drenaje:} Se identificaron áreas cercanas a la red de drenaje donde el escurrimiento natural favorece la acumulación de agua(ver figura \ref{anx:d}).
+\end{enumerate}
+Se priorizaron zonas que cumplen con:
+\begin{itemize}
+    \item[\faCheck] Proximidad a la red de drenaje (mayor captación de escurrimientos).
+    \item[\faCheck] Suelos permeables (favorecen la infiltración y recarga).
+    \item[\faCheck] Pendiente $<$ 25° (permite retención y disminuye la erosión).
+    \item[\faCheck] Cobertura vegetal moderada (posible complemento con reforestación).
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\linewidth]{figs/zonas priorización.png}
+    \caption{Mapa que muestra las zonas identificadas con potencial para intervenciones de gestión hídrica.}
+    \label{fig:zon}
+\end{figure}
+
+\section{Análisis del comportamiento hídrico en la subcuenca RH12Ec}
+
+Se calculó el volumen por hectárea tanto de infiltración como de escurrimiento en la subcuenca RH12Ec para cada mes, en el periodo comprendido entre 2013 y 2024 (ver tabla \ref{anx:e}). Este análisis permitió estimar el escurrimiento promedio mensual e identificar que, consistentemente, los meses de enero presentan los valores más altos tanto de escurrimiento como de infiltración.\\
+
+Por otro lado, el análisis de la precipitación media mensual histórica para el mismo periodo reveló que los mayores acumulados de lluvia (en milímetros) ocurren entre los meses de mayo y septiembre. En particular, los años 2013, 2016, 2017 y 2021 registraron los índices más altos de precipitación, lo que sugiere una posible recurrencia de este fenómeno cada 3 a 4 años. Con base en esta tendencia, se estima que durante el periodo mayo–septiembre de 2025 podrían registrarse precipitaciones superiores a los 200 mm (ver figura \ref{fig:precip}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figs/precip.png}
+    \caption{Gráfico de ``pequeñas series temporales múltiples'' que muestran la precipitación media mensual para el periodo 2013-2024.}
+    \label{fig:precip}
+\end{figure}
+
+\section{Conclusiones}
+
+\begin{itemize}
+    \item Existe un problema de sobreexplotación hídrica en el acuífero de la zona, clasificado como sin disponibilidad.
+    \item El análisis hidrológico muestra que enero presenta los valores más altos de escurrimiento e infiltración, mientras que los mayores acumulados de lluvia se registran de mayo a septiembre.
+    \item Existe una recurrencia de eventos de alta precipitación cada 3-4 años, con posibles máximos superiores a 200 mm en 2025.
+    \item Los factores ambientales que influyen en los patrones de escurrimiento e infiltración en el AE son la topografía, el tipo de suelo, la cobertura vegetal y la red de drenajes.
+    \item El área abarca tres municipios con presencia de 14 localidades, de las cuales sólo 8 tienen población (principalmente Huaxtla, en el municipio de Zapopan).
+    \item Muy poca superficie del área está destinada a la agricultura.
+    \item Las localidades cercanas a zonas de recarga o retención podrían beneficiarse directamente de intervenciones, facilitando su aceptación y participación.
+
+\end{itemize}
+
+
+\begin{thebibliography}{100}
+
+\bibitem{1} IIEG (2024). \textit{Diagnóstico municipal del municipio de San Cristóbal de la Barranca}. Disponible en: https://iieg.gob.mx/ns/wp-content/uploads/2024/08/San-Cristobal-de-la-Barranca.pdf
+
+\bibitem{2} IIEG (2024). \textit{Diagnóstico municipal del municipio de Zapopan}. Disponible en: https://iieg.gob.mx/ns/wp-content/uploads/2024/08/Zapopan.pdf
+
+\bibitem{3} INEGI (2007). \textit{Conjunto de Datos Vectorial Edafológico. Escala 1:250 000 Serie II Continuo Nacional Guadalajara}. Disponible en: https://www.inegi.org.mx/app/biblioteca/ficha.html?upc=702825235529
+
+\bibitem{4} INEGI (2010). \textit{Aspectos técnicos de las imágenes Landsat}. Disponible en: https://www.inegi.org.mx/contenidos/temas/imagenes/imgLANDSAT/doc/Aspectos\_\\tecnicos\_landsat.pdf
+
+\bibitem{5} INEGI (2010). \textit{Red hidrográfica. Escala 1:50 000. Edición 2.0. Subcuenca hidrográfica RH12Ec R. Verde-P. Santa Rosa. Cuenca R. Santiago-Guadalajara. RH Lerma-Santiago}. Disponible en: https://www.inegi.org.mx/app/biblioteca/ficha.html?upc=889463131342
+
+\bibitem{6} INEGI (2019). \textit{Conjunto de Datos Vectoriales de Información Topográfica F13D55 Tesistán escala 1:50 000}. Disponible en: https://www.inegi.org.mx/app/biblioteca/ficha.html?upc=889463831440
+
+\bibitem{7} Karasiak, N. (2016). \textit{Dzetsaka Qgis Classification plugin}. DOI: 10.5281/zenodo.2552284
+
+\end{thebibliography}
+
+
+
+\newpage
+
+\section*{Anexos}
+\begin{figure}[H]
+    \caption{Anexo A.}
+    \label{anx:a}
+    \centering
+    \includegraphics[width=0.8\linewidth]{figs/elevación.png}
+\end{figure}
+\begin{figure}[H]
+    \caption{Anexo B.}
+    \label{anx:b}
+    \centering
+    \includegraphics[width=0.8\linewidth]{figs/pendiente.png}
+\end{figure}
+
+\newpage
+
+\begin{figure}[H]
+    \caption{Anexo C.}
+    \label{anx:c}
+    \centering
+    \includegraphics[width=0.8\linewidth]{figs/edafología.png}
+\end{figure}
+\begin{figure}[H]
+    \caption{Anexo D.}
+    \label{anx:d}
+    \centering
+    \includegraphics[width=0.8\linewidth]{figs/red_uso_suelo.png}
+\end{figure}
+
+\newpage
+
+\begin{table}[H]
+\caption{ANEXO E. Volumen de infiltración y escurrimiento por hectárea para cada mes de cada año.}
+\label{anx:e}
+\centering
+\begin{tabular}{l|c|c|c}
+\hline
+Año & Mes & Volumen Infiltración ($m^3$) & Volumen Escurrimiento ($m^3$) \\
+\hline
+\multirow[t]{12}{*}{2013} & 1 & 2343173.93 & 3119998.93 \\
+ & 2 & 191.55 & 245320.01 \\
+ & 3 & 0.26 & 313318.49 \\
+ & 4 & 156138.70 & 2318877.42 \\
+ & 5 & 185256.67 & 4682718.51 \\
+ & 6 & 678939.85 & 7968465.43 \\
+ & 7 & 12941477.19 & 32902773.14 \\
+ & 8 & 10805886.82 & 24741053.92 \\
+ & 9 & 18928043.39 & 38840542.55 \\
+ & 10 & 4130513.29 & 13240081.78 \\
+ & 11 & 683975.23 & 2936276.22 \\
+ & 12 & 865442.18 & 2920673.33 \\
+\cline{1-4}
+\multirow[t]{12}{*}{2014} & 1 & 2343173.93 & 3119998.93 \\
+ & 2 & 191.55 & 245320.01 \\
+ & 3 & 0.26 & 313318.49 \\
+ & 4 & 156138.70 & 2318877.42 \\
+ & 5 & 185256.67 & 4682718.51 \\
+ & 6 & 678939.85 & 7968465.43 \\
+ & 7 & 12941477.19 & 32902773.14 \\
+ & 8 & 10805886.82 & 24741053.92 \\
+ & 9 & 18928043.39 & 38840542.55 \\
+ & 10 & 4130513.29 & 13240081.78 \\
+ & 11 & 683975.23 & 2936276.22 \\
+ & 12 & 865442.18 & 2920673.33 \\
+\cline{1-4}
+\multirow[t]{12}{*}{2015} & 1 & 2343173.93 & 3119998.93 \\
+ & 2 & 191.55 & 245320.01 \\
+ & 3 & 0.26 & 313318.49 \\
+ & 4 & 156138.70 & 2318877.42 \\
+ & 5 & 185256.67 & 4682718.51 \\
+ & 6 & 678939.85 & 7968465.43 \\
+ & 7 & 12941477.19 & 32902773.14 \\
+ & 8 & 10805886.82 & 24741053.92 \\
+ & 9 & 18928043.39 & 38840542.55 \\
+ & 10 & 4130513.29 & 13240081.78 \\
+ & 11 & 683975.23 & 2936276.22 \\
+ & 12 & 865442.18 & 2920673.33 \\
+\cline{1-4}
+\multirow[t]{12}{*}{2016} & 1 & 2343173.93 & 3119998.93 \\
+ & 2 & 191.55 & 245320.01 \\
+ & 3 & 0.26 & 313318.49 \\
+ & 4 & 156138.70 & 2318877.42 \\
+ & 5 & 185256.67 & 4682718.51 \\
+\cline{1-4}
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l|c|c|c}
+\hline
+Año & Mes & Volumen Infiltración ($m^3$) & Volumen Escurrimiento ($m^3$) \\
+\cline{1-4}
+\multirow[t]{12}{*}{2016} & 6 & 678939.85 & 7968465.43 \\
+& 7 & 12941477.19 & 32902773.14 \\ 
+ & 8 & 10805886.82 & 24741053.92 \\
+ & 9 & 18928043.39 & 38840542.55 \\
+ & 10 & 4130513.29 & 13240081.78 \\
+ & 11 & 683975.23 & 2936276.22 \\
+ & 12 & 865442.18 & 2920673.33 \\
+\cline{1-4}
+\multirow[t]{12}{*}{2017} & 1 & 2343173.93 & 3119998.93 \\
+ & 2 & 191.55 & 245320.01 \\
+ & 3 & 0.26 & 313318.49 \\
+ & 4 & 156138.70 & 2318877.42 \\
+ & 5 & 185256.67 & 4682718.51 \\
+ & 6 & 678939.85 & 7968465.43 \\
+ & 7 & 12941477.19 & 32902773.14 \\
+ & 8 & 10805886.82 & 24741053.92 \\
+ & 9 & 18928043.39 & 38840542.55 \\
+ & 10 & 4130513.29 & 13240081.78 \\
+ & 11 & 683975.23 & 2936276.22 \\
+ & 12 & 865442.18 & 2920673.33 \\
+\cline{1-4}
+\multirow[t]{12}{*}{2018} & 1 & 2343173.93 & 3119998.93 \\
+ & 2 & 191.55 & 245320.01 \\
+ & 3 & 0.26 & 313318.49 \\
+ & 4 & 156138.70 & 2318877.42 \\
+ & 5 & 185256.67 & 4682718.51 \\
+ & 6 & 678939.85 & 7968465.43 \\
+ & 7 & 12941477.19 & 32902773.14 \\
+ & 8 & 10805886.82 & 24741053.92 \\
+ & 9 & 18928043.39 & 38840542.55 \\
+ & 10 & 4130513.29 & 13240081.78 \\
+ & 11 & 683975.23 & 2936276.22 \\
+ & 12 & 865442.18 & 2920673.33 \\
+\cline{1-4}
+\multirow[t]{12}{*}{2019} & 1 & 2343173.93 & 3119998.93 \\
+ & 2 & 191.55 & 245320.01 \\
+ & 3 & 0.26 & 313318.49 \\
+ & 4 & 156138.70 & 2318877.42 \\
+ & 5 & 185256.67 & 4682718.51 \\
+ & 6 & 678939.85 & 7968465.43 \\
+ & 7 & 12941477.19 & 32902773.14 \\
+ & 8 & 10805886.82 & 24741053.92 \\
+ & 9 & 18928043.39 & 38840542.55 \\
+ & 10 & 4130513.29 & 13240081.78 \\
+ & 11 & 683975.23 & 2936276.22 \\
+ & 12 & 865442.18 & 2920673.33 \\
+\cline{1-4}
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l|c|c|c}
+\hline
+Año & Mes & Volumen Infiltración ($m^3$) & Volumen Escurrimiento ($m^3$) \\
+\cline{1-4}
+\multirow[t]{12}{*}{2020} & 1 & 2343173.93 & 3119998.93 \\
+ & 2 & 191.55 & 245320.01 \\
+ & 3 & 0.26 & 313318.49 \\
+ & 4 & 156138.70 & 2318877.42 \\
+ & 5 & 185256.67 & 4682718.51 \\
+ & 6 & 678939.85 & 7968465.43 \\
+ & 7 & 12941477.19 & 32902773.14 \\
+ & 8 & 10805886.82 & 24741053.92 \\
+ & 9 & 18928043.39 & 38840542.55 \\
+ & 10 & 4130513.29 & 13240081.78 \\
+ & 11 & 683975.23 & 2936276.22 \\
+ & 12 & 865442.18 & 2920673.33 \\
+\cline{1-4}
+\multirow[t]{12}{*}{2021} & 1 & 2343173.93 & 3119998.93 \\
+ & 2 & 191.55 & 245320.01 \\
+ & 3 & 0.26 & 313318.49 \\
+ & 4 & 156138.70 & 2318877.42 \\
+ & 5 & 185256.67 & 4682718.51 \\
+ & 6 & 678939.85 & 7968465.43 \\
+ & 7 & 12941477.19 & 32902773.14 \\
+ & 8 & 10805886.82 & 24741053.92 \\
+ & 9 & 18928043.39 & 38840542.55 \\
+ & 10 & 4130513.29 & 13240081.78 \\
+ & 11 & 683975.23 & 2936276.22 \\
+ & 12 & 865442.18 & 2920673.33 \\
+\cline{1-4}
+\multirow[t]{12}{*}{2022} & 1 & 2343173.93 & 3119998.93 \\
+ & 2 & 191.55 & 245320.01 \\
+ & 3 & 0.26 & 313318.49 \\
+ & 4 & 156138.70 & 2318877.42 \\
+ & 5 & 185256.67 & 4682718.51 \\
+ & 6 & 678939.85 & 7968465.43 \\
+ & 7 & 12941477.19 & 32902773.14 \\
+ & 8 & 10805886.82 & 24741053.92 \\
+ & 9 & 18928043.39 & 38840542.55 \\
+ & 10 & 4130513.29 & 13240081.78 \\
+ & 11 & 683975.23 & 2936276.22 \\
+ & 12 & 865442.18 & 2920673.33 \\
+\cline{1-4}
+\multirow[t]{12}{*}{2023} & 1 & 2343173.93 & 3119998.93 \\
+ & 2 & 191.55 & 245320.01 \\
+ & 3 & 0.26 & 313318.49 \\
+ & 4 & 156138.70 & 2318877.42 \\
+ & 5 & 185256.67 & 4682718.51 \\
+ & 6 & 678939.85 & 7968465.43 \\
+ & 7 & 12941477.19 & 32902773.14 \\
+\cline{1-4}
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+\begin{table}[H]
+\centering
+\begin{tabular}{l|c|c|c}
+\hline
+Año & Mes & Volumen Infiltración ($m^3$) & Volumen Escurrimiento ($m^3$) \\
+\cline{1-4}
+\multirow[t]{12}{*}{2023} & 8 & 10805886.82 & 24741053.92 \\
+ & 9 & 18928043.39 & 38840542.55 \\
+ & 10 & 4130513.29 & 13240081.78 \\
+ & 11 & 683975.23 & 2936276.22 \\
+ & 12 & 865442.18 & 2920673.33 \\
+\cline{1-4}
+\multirow[t]{12}{*}{2024} & 1 & 2343173.93 & 3119998.93 \\
+ & 2 & 191.55 & 245320.01 \\
+ & 3 & 0.26 & 313318.49 \\
+ & 4 & 156138.70 & 2318877.42 \\
+ & 5 & 185256.67 & 4682718.51 \\
+ & 6 & 678939.85 & 7968465.43 \\
+ & 7 & 12941477.19 & 32902773.14 \\
+ & 8 & 10805886.82 & 24741053.92 \\
+ & 9 & 18928043.39 & 38840542.55 \\
+ & 10 & 4130513.29 & 13240081.78 \\
+ & 11 & 683975.23 & 2936276.22 \\
+ & 12 & 865442.18 & 2920673.33 \\
+\cline{1-4}
+\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
