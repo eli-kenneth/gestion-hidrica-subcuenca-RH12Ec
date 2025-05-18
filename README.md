@@ -5,19 +5,19 @@ mediante el uso de imágenes satelitales, análisis SIG y programación en Pytho
 
 ## Estructura del repositorio
 
-- `data/`: datos base usados en el análisis
-- `notebooks/`: notebook con ejecución paso a paso
-- `scripts/`: funciones con docstrings en Python
-- `qgis_project/`: proyecto QGIS
-- `output/`: resultados generados (gráficas, mapas, tablas)
-- `report/`: informe final en PDF y fuente LaTeX
+- `data/`: datos base usados en el análisis.
+- `notebooks/`: notebook con ejecución paso a paso.
+- `scripts/`: funciones con docstrings en Python.
+- `qgis_project/`: proyecto QGIS.
+- `output/`: resultados generados (gráficas, mapas, tablas).
+- `report/`: informe final en PDF y fuente LaTeX.
 
 ## Tecnologías utilizadas
 
-- Python (pandas, matplotlib, seaborn)
-- QGIS 3.32
-- Imagen Landsat 7 (2022)
-- Datos cartográficos de INEGI
+- Python (pandas, matplotlib, seaborn).
+- QGIS 3.32.
+- Imagen Landsat 7 (2022).
+- Datos cartográficos de INEGI.
 
 ## Actividades realizadas
 
@@ -39,11 +39,5 @@ mediante el uso de imágenes satelitales, análisis SIG y programación en Pytho
 - Entregado en PDF y LaTeX.
 
 ---
-
-## Licencia y autoría
-
-Este proyecto es de carácter académico y técnico. No representa posturas oficiales de ninguna institución.
-
----
 **Autor:** [eli-kenneth](https://github.com/eli-kenneth)  
-**Fecha:** Marzo, 2025
+**Fecha:** Abril, 2025
